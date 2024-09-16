@@ -47,8 +47,14 @@ main () {
             red "$i 域名不可用"
         fi
     done    
-    
-     
+    yellow "正在 git 到 GitHub"
+    git add . ;git commit -am "$(date +%y-%m-%d_%H:%M:%S)";git push 1> /dev/null
+    if [ $? -eq 0 ];then
+        green "提交成功"
+        green "API: " "https://raw.githubusercontent.com/xyz349925756/sub-api/main/newcdnip.txt"
+    else
+        red "提交失败，参考返回失败信息！"
+    fi
 }
 
 main
