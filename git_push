@@ -13,7 +13,7 @@ github_pub(){
     git add . ;git commit -am "$(date +%y-%m-%d_%H:%M:%S)";git push 1> /dev/null
     if [ $? -eq 0 ];then
         green "提交成功"
-        green "API: " "https://raw.githubusercontent.com/xyz349925756/sub-api/main/newcdnip.txt"
+        green "API: " "https://raw.githubusercontent.com/xyz349925756/sub-api/main/newcdnsite.txt"
     else
         error "提交失败，参考返回失败信息！"
     fi
