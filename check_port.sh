@@ -41,7 +41,7 @@ main () {
             yellow "命令执行成功，正在查询归属国！"
             COLO=$(curl -s https://$i/cdn-cgi/trace  |awk 'BEGIN{FS="="} /colo/ {print $2}')
             get_random_port
-            echo "$i:$RANDOM_PORT#$COLO" >> newcdnsite.txt
+            echo "$i:$RANDOM_PORT#$COLO" >> newcdnsite
             green "$i 保存成功"
         else
             red "$i 域名不可用"
